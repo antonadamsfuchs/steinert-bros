@@ -1,10 +1,24 @@
 import type { Metadata } from "next";
 import Script from "next/script";
+import { Inter, Inter_Tight } from "next/font/google";
 import "./globals.css";
 
+const interTight = Inter_Tight({
+  subsets: ["latin"],
+  weight: ["500", "600", "700"],
+  variable: "--font-heading",
+});
+
+const inter = Inter({
+  subsets: ["latin"],
+  weight: ["400", "500", "600", "700"],
+  variable: "--font-sans",
+});
+
 export const metadata: Metadata = {
-  title: "Steinert Brothers - VetHUB Certified FFE Contractor | Texas",
-  description: "Service-disabled veteran owned, VetHUB certified FFE contractor specializing in furniture, fixtures, and equipment procurement for Texas schools, parks, and government facilities.",
+  title: "Steinert Brothers · VetHUB-Certified Architecture in Texas",
+  description:
+    "Texas VetHUB-certified architectural services. Service-disabled veteran-owned. Licensed architect serving general contractors, design firms, and public agencies.",
 };
 
 export default function RootLayout({
@@ -13,7 +27,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" className={`${inter.variable} ${interTight.variable}`}>
       <head>
         {/* Apollo.io Analytics */}
         <Script
@@ -37,9 +51,7 @@ export default function RootLayout({
           }}
         />
       </head>
-      <body className="antialiased">
-        {children}
-      </body>
+      <body className="antialiased">{children}</body>
     </html>
   );
 }

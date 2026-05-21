@@ -4,8 +4,6 @@ import React from 'react';
 import Image from 'next/image';
 import {
   ChevronRight,
-  Layers, Building2, Package,
-  CheckCircle,
   Mail, Phone, MapPin,
 } from 'lucide-react';
 import ContactForm from './components/ContactForm';
@@ -22,19 +20,16 @@ const projectTypes = [
 
 const pillars = [
   {
-    icon: Layers,
     title: 'Architectural subcontracting',
     body: 'Production drafting, construction documents, code review, Revit/CAD support, and construction administration for prime architects and design-build teams. Add VetHUB participation to your A/E side without compromising delivery quality.',
     link: null,
   },
   {
-    icon: Building2,
     title: 'Full architectural services',
     body: 'Stamped architectural services across Texas, Iowa, and Washington. Anton Adams-Fuchs, AIA leads design from concept through construction administration: institutional, civic, and education focus.',
     link: null,
   },
   {
-    icon: Package,
     title: 'FFE procurement',
     body: 'VetHUB-certified furniture, fixtures, and equipment procurement. Competitive sourcing, vendor coordination, installation management. Same certification, broader scope.',
     link: { href: '/ffe', label: 'Learn more' },
@@ -236,37 +231,29 @@ export default function HomePage() {
               <div
                 key={i}
                 className="rounded-lg p-8 flex flex-col"
-                style={{
-                  backgroundColor: 'var(--surface)',
-                  border: '1px solid var(--border)',
-                }}
+                style={{ backgroundColor: 'var(--accent)' }}
               >
-                <pillar.icon
-                  size={28}
-                  className="mb-5 flex-shrink-0"
-                  style={{ color: 'var(--accent)' }}
-                />
                 <h3
                   className="font-semibold mb-3"
                   style={{
                     fontFamily: 'var(--font-heading)',
                     fontSize: '22px',
-                    color: 'var(--foreground)',
+                    color: '#ffffff',
                   }}
                 >
                   {pillar.title}
                 </h3>
                 <p
                   className="leading-relaxed flex-1"
-                  style={{ color: 'var(--muted)', fontSize: '16px' }}
+                  style={{ color: '#FEF3C7', fontSize: '16px' }}
                 >
                   {pillar.body}
                 </p>
                 {pillar.link && (
                   <a
                     href={pillar.link.href}
-                    className="inline-flex items-center gap-1 text-sm font-semibold mt-5"
-                    style={{ color: 'var(--accent)', fontFamily: 'var(--font-heading)' }}
+                    className="inline-flex items-center gap-1 text-sm font-semibold mt-5 transition-opacity hover:opacity-100"
+                    style={{ color: '#ffffff', opacity: 0.9, fontFamily: 'var(--font-heading)' }}
                   >
                     {pillar.link.label} <ChevronRight size={14} />
                   </a>
@@ -331,15 +318,10 @@ export default function HomePage() {
               >
                 What you get
               </h3>
-              <ul className="space-y-4">
+              <ul className="space-y-3">
                 {checklistItems.map((item, i) => (
-                  <li key={i} className="flex items-start gap-3">
-                    <CheckCircle
-                      size={18}
-                      className="flex-shrink-0 mt-0.5"
-                      style={{ color: 'var(--accent)' }}
-                    />
-                    <span style={{ color: 'var(--muted)', fontSize: '15px' }}>{item}</span>
+                  <li key={i} style={{ color: 'var(--muted)', fontSize: '15px' }}>
+                    {item}
                   </li>
                 ))}
               </ul>

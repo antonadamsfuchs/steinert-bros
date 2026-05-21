@@ -4,33 +4,27 @@ import React from 'react';
 import {
   ChevronRight,
   Mail, Phone, MapPin,
-  Search, FileText, Truck, ClipboardCheck,
-  School, GraduationCap, Library, Building2, Stethoscope, Landmark,
 } from 'lucide-react';
 import ContactForm from '../components/ContactForm';
 import Nav from '@/app/components/Nav';
 
 const services = [
   {
-    icon: Search,
     title: 'Competitive bid solicitation',
     description:
       'Multi-vendor sourcing for real cost discovery. We go to market across qualified suppliers, not a single dealer contact.',
   },
   {
-    icon: FileText,
     title: 'Specification coordination',
     description:
       'Technical review with the A/E team at every stage to ensure design intent is preserved through procurement and substitution review.',
   },
   {
-    icon: Truck,
     title: 'Vendor & schedule management',
     description:
       'Relationship management with manufacturers, dealers, and installers from award through delivery. One point of contact for the GC.',
   },
   {
-    icon: ClipboardCheck,
     title: 'Installation oversight & closeout',
     description:
       'Delivery coordination, install supervision, punch resolution, warranty documentation, and final asset inventory for the owner.',
@@ -38,12 +32,12 @@ const services = [
 ];
 
 const projectTypes = [
-  { icon: School,       label: 'K-12 Schools' },
-  { icon: GraduationCap, label: 'Higher Education' },
-  { icon: Library,      label: 'Public Libraries' },
-  { icon: Building2,    label: 'Municipal Buildings' },
-  { icon: Stethoscope,  label: 'Healthcare Clinics' },
-  { icon: Landmark,     label: 'State Agency Facilities' },
+  'K-12 Schools',
+  'Higher Education',
+  'Public Libraries',
+  'Municipal Buildings',
+  'Healthcare Clinics',
+  'State Agency Facilities',
 ];
 
 const budgetRows = [
@@ -158,16 +152,15 @@ export default function FFEPage() {
               <div
                 key={i}
                 className="p-8 rounded-xl"
-                style={{ backgroundColor: 'var(--surface)', border: '1px solid var(--border)' }}
+                style={{ backgroundColor: 'var(--accent)' }}
               >
-                <svc.icon size={26} className="mb-4" style={{ color: 'var(--accent)' }} />
                 <h3
                   className="text-xl font-semibold mb-3"
-                  style={{ fontFamily: 'var(--font-heading)', color: 'var(--foreground)' }}
+                  style={{ fontFamily: 'var(--font-heading)', color: '#ffffff' }}
                 >
                   {svc.title}
                 </h3>
-                <p style={{ color: 'var(--muted)', fontSize: '15px', lineHeight: '1.6' }}>
+                <p style={{ color: '#FEF3C7', fontSize: '15px', lineHeight: '1.6' }}>
                   {svc.description}
                 </p>
               </div>
@@ -186,18 +179,17 @@ export default function FFEPage() {
             Where we work.
           </h2>
           <div className="flex flex-wrap gap-3">
-            {projectTypes.map((pt, i) => (
+            {projectTypes.map((label, i) => (
               <div
                 key={i}
-                className="flex items-center gap-2.5 px-5 py-3 rounded-full text-sm font-medium"
+                className="px-5 py-3 rounded-full text-sm font-medium"
                 style={{
                   backgroundColor: 'var(--background)',
                   border: '1px solid var(--border)',
                   color: 'var(--foreground)',
                 }}
               >
-                <pt.icon size={15} style={{ color: 'var(--accent)' }} />
-                {pt.label}
+                {label}
               </div>
             ))}
           </div>

@@ -130,7 +130,7 @@ export default function FFEPage() {
                 The owner pays for both.
               </p>
               <p>
-                State auditors (particularly on ESSER-funded K-12 and higher education projects) are increasingly
+                State auditors (particularly on ESSER-funded school district and higher education projects) are increasingly
                 scrutinizing these arrangements. A pass-through that doesn&apos;t hold up to good-faith documentation
                 review can expose the GC to disqualification, clawback, or debarment risk on future bids.
               </p>
@@ -216,7 +216,7 @@ export default function FFEPage() {
                 How VetHUB credit works on a typical project.
               </h2>
               <p className="text-lg leading-relaxed" style={{ color: 'var(--muted)' }}>
-                On a state-funded K-12 project, the district sets a VetHUB participation goal as a percentage of total
+                On a state-funded school project, the district sets a VetHUB participation goal as a percentage of total
                 construction value. FFE is a natural scope for VetHUB-certified subs: discrete,
                 documentable, and doesn&apos;t require a licensed general contractor. When Steinert Brothers holds the
                 FFE subcontract, 100% of that scope counts toward the goal with a clean audit trail.

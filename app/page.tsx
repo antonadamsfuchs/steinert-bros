@@ -45,7 +45,7 @@ const checklistItems = [
   'Licensed architects on the work (TX, IA, WA)',
   'Verifiable VetHUB credit, not pass-through',
   'Service-disabled veteran ownership (US Navy)',
-  'College Station presence with TEEX network access',
+  'College Station presence with state agency relationships',
   '25+ years in practice across institutional and civic work',
   'Real deliverables on real schedules',
 ];
@@ -55,7 +55,7 @@ const principals = [
     photo: '/anton.png',
     name: 'Anton Adams-Fuchs, AIA',
     subtitle: 'Licensed architect. Texas, Iowa, Washington.',
-    bio: 'Anton runs the architectural practice for Steinert Brothers and is principal of Cherry Architecture. Twenty-five years in design and construction, with experience across institutional, civic, and residential work in three states. He focuses on buildable design, construction administration, and integrating with prime architectural teams.',
+    bio: 'Anton runs the architectural practice for Steinert Brothers. Twenty-five years in design and construction, with experience across institutional, civic, and residential work in three states. He focuses on buildable design, construction administration, and integrating with prime architectural teams.',
     phone: '(319) 473-4473',
     phoneHref: 'tel:+13194734473',
     email: 'anton@steinertbros.com',
@@ -63,8 +63,8 @@ const principals = [
   {
     photo: '/stephen.jpg',
     name: 'Stephen Fuchs',
-    subtitle: 'Service-disabled Navy veteran. Operations and procurement.',
-    bio: 'Stephen runs operations and procurement for Steinert Brothers and serves as Facilities and Development Manager at TEEX (Texas A&M Engineering Extension Service), overseeing major facility expansion projects. A service-disabled Navy veteran, he brings deep familiarity with Texas state procurement, agency relationships, and institutional construction.',
+    subtitle: 'Construction project manager. Service-disabled Navy veteran.',
+    bio: 'Stephen is the construction project manager for Steinert Brothers. Twenty years of experience in Texas state procurement and institutional construction, with hundreds of millions of dollars in projects managed across higher education and state agency facilities. A service-disabled Navy veteran, he brings the discipline of military operations to every project he runs.',
     phone: '(941) 400-3843',
     phoneHref: 'tel:+19414003843',
     email: 'stephen@steinertbros.com',

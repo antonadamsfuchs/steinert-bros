@@ -3,7 +3,7 @@
 import React, { useState } from 'react';
 
 const PROJECT_TYPES = [
-  'K-12 / School District',
+  'Schools / School Districts',
   'Higher Education',
   'Government / State Agency',
   'Parks & Recreation',
